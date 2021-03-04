@@ -1,0 +1,12 @@
+D:\OOP\TP1_PBO\TP1_PBO\bin\Debug\TP1_PBO.exe.config
+D:\OOP\TP1_PBO\TP1_PBO\bin\Debug\TP1_PBO.exe
+D:\OOP\TP1_PBO\TP1_PBO\bin\Debug\TP1_PBO.pdb
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.csprojAssemblyReference.cache
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.Form1.resources
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.menu.resources
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.Properties.Resources.resources
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.csproj.GenerateResource.cache
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.csproj.CoreCompileInputs.cache
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.exe
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.pdb
+D:\OOP\TP1_PBO\TP1_PBO\obj\Debug\TP1_PBO.ListItem.resources
