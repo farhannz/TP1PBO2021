@@ -8,5 +8,6 @@ o [Logout]✔
 o [Tampilin data]✔    
 o [Filter Data] :
         - Sesuai Jenis Barang (Makanan/Elektronik/Baju) ✔   
-        - Sesuai Range Harga ✕
+        - Sesuai Range Harga ✔ 
+o [Menu Detail] X
  </pre>
