@@ -73,6 +73,7 @@ namespace TP1_PBO
             this.btnBeli.TabIndex = 3;
             this.btnBeli.Text = "Beli";
             this.btnBeli.UseVisualStyleBackColor = true;
+            this.btnBeli.Click += new System.EventHandler(this.btnBeli_Click);
             // 
             // lblJenis
             // 

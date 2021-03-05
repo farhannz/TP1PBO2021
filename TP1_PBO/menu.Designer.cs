@@ -40,12 +40,15 @@ namespace TP1_PBO
             this.btnCari = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tempatTampilin = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.btnKembali = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(165, 39);
+            this.btnHome.Location = new System.Drawing.Point(161, 37);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(101, 82);
             this.btnHome.TabIndex = 0;
@@ -55,7 +58,7 @@ namespace TP1_PBO
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(419, 39);
+            this.button3.Location = new System.Drawing.Point(415, 37);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 82);
             this.button3.TabIndex = 2;
@@ -66,7 +69,7 @@ namespace TP1_PBO
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(566, 72);
+            this.lbUsername.Location = new System.Drawing.Point(562, 70);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(81, 17);
             this.lbUsername.TabIndex = 3;
@@ -79,7 +82,7 @@ namespace TP1_PBO
             "Elektronik",
             "Baju",
             "Makanan"});
-            this.jenisBarang.Location = new System.Drawing.Point(19, 166);
+            this.jenisBarang.Location = new System.Drawing.Point(15, 164);
             this.jenisBarang.Name = "jenisBarang";
             this.jenisBarang.Size = new System.Drawing.Size(119, 24);
             this.jenisBarang.TabIndex = 5;
@@ -88,7 +91,7 @@ namespace TP1_PBO
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
-            this.lblJenis.Location = new System.Drawing.Point(16, 146);
+            this.lblJenis.Location = new System.Drawing.Point(12, 144);
             this.lblJenis.Name = "lblJenis";
             this.lblJenis.Size = new System.Drawing.Size(99, 17);
             this.lblJenis.TabIndex = 6;
@@ -97,7 +100,7 @@ namespace TP1_PBO
             // lblRangeHarga
             // 
             this.lblRangeHarga.AutoSize = true;
-            this.lblRangeHarga.Location = new System.Drawing.Point(16, 214);
+            this.lblRangeHarga.Location = new System.Drawing.Point(12, 212);
             this.lblRangeHarga.Name = "lblRangeHarga";
             this.lblRangeHarga.Size = new System.Drawing.Size(101, 17);
             this.lblRangeHarga.TabIndex = 8;
@@ -110,7 +113,7 @@ namespace TP1_PBO
             "100rb - 200rb",
             "200rb - 500rb",
             "500rb - 1jt"});
-            this.rangeHarga.Location = new System.Drawing.Point(19, 234);
+            this.rangeHarga.Location = new System.Drawing.Point(15, 232);
             this.rangeHarga.Name = "rangeHarga";
             this.rangeHarga.Size = new System.Drawing.Size(119, 24);
             this.rangeHarga.TabIndex = 7;
@@ -118,7 +121,7 @@ namespace TP1_PBO
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(289, 39);
+            this.button2.Location = new System.Drawing.Point(285, 37);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 82);
             this.button2.TabIndex = 1;
@@ -127,7 +130,7 @@ namespace TP1_PBO
             // 
             // btnCari
             // 
-            this.btnCari.Location = new System.Drawing.Point(19, 274);
+            this.btnCari.Location = new System.Drawing.Point(15, 272);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(75, 23);
             this.btnCari.TabIndex = 10;
@@ -139,34 +142,56 @@ namespace TP1_PBO
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.tempatTampilin);
-            this.panel1.Location = new System.Drawing.Point(170, 150);
+            this.panel1.Location = new System.Drawing.Point(166, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(916, 373);
             this.panel1.TabIndex = 11;
             // 
             // tempatTampilin
             // 
+            this.tempatTampilin.AutoScroll = true;
             this.tempatTampilin.AutoSize = true;
-            this.tempatTampilin.Location = new System.Drawing.Point(0, 4);
+            this.tempatTampilin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tempatTampilin.Location = new System.Drawing.Point(0, 0);
             this.tempatTampilin.Name = "tempatTampilin";
-            this.tempatTampilin.Size = new System.Drawing.Size(913, 366);
+            this.tempatTampilin.Size = new System.Drawing.Size(916, 373);
             this.tempatTampilin.TabIndex = 0;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.btnKembali);
+            this.panelMain.Controls.Add(this.panel1);
+            this.panelMain.Controls.Add(this.btnCari);
+            this.panelMain.Controls.Add(this.lblRangeHarga);
+            this.panelMain.Controls.Add(this.rangeHarga);
+            this.panelMain.Controls.Add(this.lblJenis);
+            this.panelMain.Controls.Add(this.jenisBarang);
+            this.panelMain.Controls.Add(this.lbUsername);
+            this.panelMain.Controls.Add(this.button3);
+            this.panelMain.Controls.Add(this.button2);
+            this.panelMain.Controls.Add(this.btnHome);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1111, 535);
+            this.panelMain.TabIndex = 12;
+            // 
+            // btnKembali
+            // 
+            this.btnKembali.Location = new System.Drawing.Point(15, 96);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(75, 23);
+            this.btnKembali.TabIndex = 12;
+            this.btnKembali.Text = "Kembali";
+            this.btnKembali.UseVisualStyleBackColor = true;
+            this.btnKembali.Visible = false;
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 535);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnCari);
-            this.Controls.Add(this.lblRangeHarga);
-            this.Controls.Add(this.rangeHarga);
-            this.Controls.Add(this.lblJenis);
-            this.Controls.Add(this.jenisBarang);
-            this.Controls.Add(this.lbUsername);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "menu";
@@ -175,8 +200,9 @@ namespace TP1_PBO
             this.Load += new System.EventHandler(this.menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -193,5 +219,7 @@ namespace TP1_PBO
         private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel tempatTampilin;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnKembali;
     }
 }

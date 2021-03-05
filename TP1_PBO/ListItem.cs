@@ -41,5 +41,10 @@ namespace TP1_PBO
             lblHarga.Text += " " + this.Harga.ToString();
             lblJenis.Text = this.Jenis;
         }
+
+        private void btnBeli_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
