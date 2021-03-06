@@ -9,5 +9,5 @@ o [Tampilin data]✔
 o [Filter Data] :
         - Sesuai Jenis Barang (Makanan/Elektronik/Baju) ✔   
         - Sesuai Range Harga ✔ 
-o [Menu Detail] X
+o [Menu Detail] ✔
  </pre>
