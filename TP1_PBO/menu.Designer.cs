@@ -1,7 +1,7 @@
 ﻿
 namespace TP1_PBO
 {
-    partial class menu
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,47 +29,29 @@ namespace TP1_PBO
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHome = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.lbUsername = new System.Windows.Forms.Label();
             this.jenisBarang = new System.Windows.Forms.ComboBox();
             this.lblJenis = new System.Windows.Forms.Label();
             this.lblRangeHarga = new System.Windows.Forms.Label();
             this.rangeHarga = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnCari = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tempatTampilin = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnKembali = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.catalog = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.lblNim = new System.Windows.Forms.Label();
+            this.lblNama = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnHome
-            // 
-            this.btnHome.Location = new System.Drawing.Point(161, 37);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(101, 82);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(415, 37);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 82);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Logout";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.logout);
-            // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(562, 70);
+            this.lbUsername.Location = new System.Drawing.Point(634, 102);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(81, 17);
             this.lbUsername.TabIndex = 3;
@@ -119,15 +101,6 @@ namespace TP1_PBO
             this.rangeHarga.TabIndex = 7;
             this.rangeHarga.Text = "-";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(285, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 82);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Catalog";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // btnCari
             // 
             this.btnCari.Location = new System.Drawing.Point(15, 272);
@@ -159,6 +132,8 @@ namespace TP1_PBO
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.lblNama);
+            this.panelMain.Controls.Add(this.lblNim);
             this.panelMain.Controls.Add(this.btnKembali);
             this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Controls.Add(this.btnCari);
@@ -168,7 +143,7 @@ namespace TP1_PBO
             this.panelMain.Controls.Add(this.jenisBarang);
             this.panelMain.Controls.Add(this.lbUsername);
             this.panelMain.Controls.Add(this.button3);
-            this.panelMain.Controls.Add(this.button2);
+            this.panelMain.Controls.Add(this.catalog);
             this.panelMain.Controls.Add(this.btnHome);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
@@ -178,15 +153,70 @@ namespace TP1_PBO
             // 
             // btnKembali
             // 
-            this.btnKembali.Location = new System.Drawing.Point(15, 96);
+            this.btnKembali.Location = new System.Drawing.Point(15, 91);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(75, 23);
+            this.btnKembali.Size = new System.Drawing.Size(75, 28);
             this.btnKembali.TabIndex = 12;
             this.btnKembali.Text = "Kembali";
             this.btnKembali.UseVisualStyleBackColor = true;
             this.btnKembali.Visible = false;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
-            // menu
+            // button3
+            // 
+            this.button3.Image = global::TP1_PBO.Properties.Resources.exit;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(459, 37);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(153, 82);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Logout";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.logout);
+            // 
+            // catalog
+            // 
+            this.catalog.Image = global::TP1_PBO.Properties.Resources.shopping_cart1;
+            this.catalog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.catalog.Location = new System.Drawing.Point(302, 37);
+            this.catalog.Name = "catalog";
+            this.catalog.Size = new System.Drawing.Size(151, 82);
+            this.catalog.TabIndex = 1;
+            this.catalog.Text = "Catalog";
+            this.catalog.UseVisualStyleBackColor = true;
+            this.catalog.Click += new System.EventHandler(this.catalogClick);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Image = global::TP1_PBO.Properties.Resources.home;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(161, 37);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(135, 82);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.homeClick);
+            // 
+            // lblNim
+            // 
+            this.lblNim.AutoSize = true;
+            this.lblNim.Location = new System.Drawing.Point(911, 25);
+            this.lblNim.Name = "lblNim";
+            this.lblNim.Size = new System.Drawing.Size(100, 17);
+            this.lblNim.TabIndex = 13;
+            this.lblNim.Text = "NIM : 1904908";
+            // 
+            // lblNama
+            // 
+            this.lblNama.AutoSize = true;
+            this.lblNama.Location = new System.Drawing.Point(911, 54);
+            this.lblNama.Name = "lblNama";
+            this.lblNama.Size = new System.Drawing.Size(171, 17);
+            this.lblNama.TabIndex = 14;
+            this.lblNama.Text = "Nama : Farhan Nurzaman";
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +224,7 @@ namespace TP1_PBO
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "menu";
+            this.Name = "Menu";
             this.Text = "Menu Utama";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.menu_FormClosed);
             this.Load += new System.EventHandler(this.menu_Load);
@@ -215,11 +245,13 @@ namespace TP1_PBO
         private System.Windows.Forms.Label lblJenis;
         private System.Windows.Forms.Label lblRangeHarga;
         private System.Windows.Forms.ComboBox rangeHarga;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button catalog;
         private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel tempatTampilin;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnKembali;
+        private System.Windows.Forms.Label lblNama;
+        private System.Windows.Forms.Label lblNim;
     }
 }

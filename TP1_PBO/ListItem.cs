@@ -15,6 +15,8 @@ namespace TP1_PBO
         private string _NamaBarang;
         private int _HargaBarang;
         private string _JenisBarang;
+        private Menu formMenu;
+        private bool _clicked = false;
         public string Nama
         {
             get { return _NamaBarang; }
@@ -30,9 +32,19 @@ namespace TP1_PBO
             get { return _JenisBarang; }
             set { _JenisBarang = value; }
         }
+        public bool diKlik
+        {
+            get { return _clicked; }
+            set { this._clicked = value; }
+        }
         public ListItem()
         {
             InitializeComponent();
+        }
+        public ListItem(Menu m)
+        {
+            InitializeComponent();
+            this.formMenu = m;
         }
 
         private void ListItem_Load(object sender, EventArgs e)
@@ -44,7 +56,7 @@ namespace TP1_PBO
 
         private void btnBeli_Click(object sender, EventArgs e)
         {
-            
+             formMenu.switchTampilan(this);
         }
     }
 }

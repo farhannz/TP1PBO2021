@@ -10,30 +10,55 @@ using System.Windows.Forms;
 
 namespace TP1_PBO
 {
-    public partial class menu : Form
+    public partial class Menu : Form
     {
-        public bool _visible = true;
-        
+        public static bool _visible = true;
+        private ListItem _detailItem;
         private ListItem[] items = new ListItem[16];
-        public menu()
+        public Menu()
         {
             InitializeComponent();
         }
-
         private void menu_Load(object sender, EventArgs e)
         {
             lbUsername.Text = lbUsername.Text + " " + Form1.UsernameValue;
             isiData();
             tampilData("","");
         }
-        public void switchTampilan()
+        public void switchTampilan(ListItem detailItem)
         {
-            _visible = !(_visible);
-            lblJenis.Visible = _visible;
-            lblRangeHarga.Visible = _visible;
-            jenisBarang.Visible = _visible;
-            rangeHarga.Visible = _visible;
-            btnKembali.Visible = !(_visible);
+            if(detailItem.diKlik == false)
+            {
+                _visible = !(_visible);
+                lblJenis.Visible = _visible;
+                lblRangeHarga.Visible = _visible;
+                jenisBarang.Visible = _visible;
+                rangeHarga.Visible = _visible;
+                btnCari.Visible = _visible;
+                btnKembali.Visible = !(_visible);
+                if (tempatTampilin.Controls.Count > 0)
+                {
+                    tempatTampilin.Controls.Clear();
+                    tempatTampilin.Controls.Add(detailItem);
+                }
+                detailItem.diKlik = true;
+            }
+            this._detailItem = detailItem;
+            /*if (pilih == 1)
+            {
+                foreach (ListItem isi in items)
+                {
+                    if (isi.isClicked == true)
+                    {
+                        if (tempatTampilin.Controls.Count > 0)
+                        {
+                            tempatTampilin.Controls.Clear();
+                        }
+                        tempatTampilin.Controls.Add(isi);
+                        break;
+                    }
+                }
+            }*/
         }
         private void isiData()
         {
@@ -41,11 +66,10 @@ namespace TP1_PBO
             Random _rand = new Random();
             for (int i = 0; i < items.Length; ++i)
             {
-                items[i] = new ListItem();
+                items[i] = new ListItem(this);
                 items[i].Nama = "Yooz";
                 items[i].Harga = _rand.Next(3, 8) * 100000;
                 items[i].Jenis = a[_rand.Next(0, a.Length)];
-                /*items[i].Anchor = (AnchorStyles.Top | AnchorStyles.Bottom);*/
             }
         }
         private void tampilData(string jenis, string harga)
@@ -113,11 +137,30 @@ namespace TP1_PBO
             tampilData(cari,cariH);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homeClick(object sender, EventArgs e)
         {
-            tampilData("","");
+            tampilData("", "");
             jenisBarang.Text = "-";
             rangeHarga.Text = "-";
+        }
+
+        private void catalogClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://tokopedia.com");
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+
+            this._detailItem.diKlik = false;
+            _visible = !(_visible);
+            lblJenis.Visible = _visible;
+            lblRangeHarga.Visible = _visible;
+            jenisBarang.Visible = _visible;
+            rangeHarga.Visible = _visible;
+            btnCari.Visible = _visible;
+            btnKembali.Visible = !(_visible);
+            tampilData("", "");
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TP1_PBO
         {
             if(textPass.Text == "pbo123")
             {
-                menu utama = new menu();
+                Menu utama = new Menu();
                 //this.Opacity = 0.0f;
                 this.Hide();
                 UsernameValue = textUsername.Text;
