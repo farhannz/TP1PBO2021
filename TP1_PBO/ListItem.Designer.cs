@@ -29,23 +29,15 @@ namespace TP1_PBO
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNama = new System.Windows.Forms.Label();
             this.lblHarga = new System.Windows.Forms.Label();
             this.btnBeli = new System.Windows.Forms.Button();
             this.lblJenis = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tempatGambar = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tempatGambar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 161);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lblNama
             // 
@@ -84,19 +76,39 @@ namespace TP1_PBO
             this.lblJenis.TabIndex = 4;
             this.lblJenis.Text = "Jenis";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tempatGambar);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(190, 161);
+            this.panel1.TabIndex = 5;
+            // 
+            // tempatGambar
+            // 
+            this.tempatGambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tempatGambar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tempatGambar.Location = new System.Drawing.Point(0, 0);
+            this.tempatGambar.Name = "tempatGambar";
+            this.tempatGambar.Size = new System.Drawing.Size(190, 161);
+            this.tempatGambar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tempatGambar.TabIndex = 0;
+            this.tempatGambar.TabStop = false;
+            // 
             // ListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblJenis);
             this.Controls.Add(this.btnBeli);
             this.Controls.Add(this.lblHarga);
             this.Controls.Add(this.lblNama);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "ListItem";
             this.Size = new System.Drawing.Size(191, 313);
             this.Load += new System.EventHandler(this.ListItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tempatGambar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,10 +116,11 @@ namespace TP1_PBO
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox tempatGambar;
         private System.Windows.Forms.Label lblNama;
         private System.Windows.Forms.Label lblHarga;
         private System.Windows.Forms.Button btnBeli;
         private System.Windows.Forms.Label lblJenis;
+        private System.Windows.Forms.Panel panel1;
     }
 }

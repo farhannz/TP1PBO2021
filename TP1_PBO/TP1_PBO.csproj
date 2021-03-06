@@ -113,5 +113,26 @@
   <ItemGroup>
     <None Include="Resources\home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rtx3060.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moondrop.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daxa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rendang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kemeja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jaket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wagyu.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

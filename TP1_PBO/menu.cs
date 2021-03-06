@@ -14,7 +14,7 @@ namespace TP1_PBO
     {
         public static bool _visible = true;
         private ListItem _detailItem;
-        private ListItem[] items = new ListItem[16];
+        private ListItem[] items = new ListItem[6];
         public Menu()
         {
             InitializeComponent();
@@ -63,14 +63,50 @@ namespace TP1_PBO
         private void isiData()
         {
             string[] a = new string[] { "Makanan", "Baju", "Elektronik" };
-            Random _rand = new Random();
-            for (int i = 0; i < items.Length; ++i)
+            items[0] = new ListItem(this);
+            items[0].Nama = "Moondrop SSR";
+            items[0].Harga = 700000;
+            items[0].Jenis = a[2];
+            items[0].Gambar = Properties.Resources.moondrop;
+
+            items[1] = new ListItem(this);
+            items[1].Nama = "Wagyu A5";
+            items[1].Harga = 620000;
+            items[1].Jenis = a[0];
+            items[1].Gambar = Properties.Resources.wagyu;
+
+            items[2] = new ListItem(this);
+            items[2].Nama = "Rexus DAXA M71 Pro";
+            items[2].Harga = 850000;
+            items[2].Jenis = a[2];
+            items[2].Gambar = Properties.Resources.daxa;
+
+            items[3] = new ListItem(this);
+            items[3].Nama = "Rendang";
+            items[3].Harga = 125000;
+            items[3].Jenis = a[0];
+            items[3].Gambar = Properties.Resources.rendang;
+
+            items[4] = new ListItem(this);
+            items[4].Nama = "Kemeja Panjang";
+            items[4].Harga = 175000;
+            items[4].Jenis = a[1];
+            items[4].Gambar = Properties.Resources.kemeja;
+
+            items[5] = new ListItem(this);
+            items[5].Nama = "Jaket";
+            items[5].Harga = 250000;
+            items[5].Jenis = a[1];
+            items[5].Gambar = Properties.Resources.jaket;
+
+            /*Random _rand = new Random();
+            for (int i = 1; i < items.Length; ++i)
             {
                 items[i] = new ListItem(this);
                 items[i].Nama = "Yooz";
                 items[i].Harga = _rand.Next(3, 8) * 100000;
                 items[i].Jenis = a[_rand.Next(0, a.Length)];
-            }
+            }*/
         }
         private void tampilData(string jenis, string harga)
         {

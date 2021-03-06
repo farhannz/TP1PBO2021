@@ -15,6 +15,7 @@ namespace TP1_PBO
         private string _NamaBarang;
         private int _HargaBarang;
         private string _JenisBarang;
+        private Image _Gambar;
         private Menu formMenu;
         private bool _clicked = false;
         public string Nama
@@ -31,6 +32,11 @@ namespace TP1_PBO
         {
             get { return _JenisBarang; }
             set { _JenisBarang = value; }
+        }
+        public Image Gambar
+        {
+            get { return _Gambar; }
+            set { _Gambar = value; }
         }
         public bool diKlik
         {
@@ -50,8 +56,9 @@ namespace TP1_PBO
         private void ListItem_Load(object sender, EventArgs e)
         {
             lblNama.Text = this.Nama;
-            lblHarga.Text += " " + this.Harga.ToString();
+            lblHarga.Text += " " + String.Format("{0:n0}",this._HargaBarang);
             lblJenis.Text = this.Jenis;
+            tempatGambar.Image = Gambar;
         }
 
         private void btnBeli_Click(object sender, EventArgs e)

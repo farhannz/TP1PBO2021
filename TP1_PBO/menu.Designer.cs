@@ -38,12 +38,12 @@ namespace TP1_PBO
             this.panel1 = new System.Windows.Forms.Panel();
             this.tempatTampilin = new System.Windows.Forms.FlowLayoutPanel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblNama = new System.Windows.Forms.Label();
+            this.lblNim = new System.Windows.Forms.Label();
             this.btnKembali = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.catalog = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.lblNim = new System.Windows.Forms.Label();
-            this.lblNama = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +151,24 @@ namespace TP1_PBO
             this.panelMain.Size = new System.Drawing.Size(1111, 535);
             this.panelMain.TabIndex = 12;
             // 
+            // lblNama
+            // 
+            this.lblNama.AutoSize = true;
+            this.lblNama.Location = new System.Drawing.Point(911, 54);
+            this.lblNama.Name = "lblNama";
+            this.lblNama.Size = new System.Drawing.Size(171, 17);
+            this.lblNama.TabIndex = 14;
+            this.lblNama.Text = "Nama : Farhan Nurzaman";
+            // 
+            // lblNim
+            // 
+            this.lblNim.AutoSize = true;
+            this.lblNim.Location = new System.Drawing.Point(911, 25);
+            this.lblNim.Name = "lblNim";
+            this.lblNim.Size = new System.Drawing.Size(100, 17);
+            this.lblNim.TabIndex = 13;
+            this.lblNim.Text = "NIM : 1904908";
+            // 
             // btnKembali
             // 
             this.btnKembali.Location = new System.Drawing.Point(15, 91);
@@ -197,24 +215,6 @@ namespace TP1_PBO
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.homeClick);
-            // 
-            // lblNim
-            // 
-            this.lblNim.AutoSize = true;
-            this.lblNim.Location = new System.Drawing.Point(911, 25);
-            this.lblNim.Name = "lblNim";
-            this.lblNim.Size = new System.Drawing.Size(100, 17);
-            this.lblNim.TabIndex = 13;
-            this.lblNim.Text = "NIM : 1904908";
-            // 
-            // lblNama
-            // 
-            this.lblNama.AutoSize = true;
-            this.lblNama.Location = new System.Drawing.Point(911, 54);
-            this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(171, 17);
-            this.lblNama.TabIndex = 14;
-            this.lblNama.Text = "Nama : Farhan Nurzaman";
             // 
             // Menu
             // 
